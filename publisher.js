@@ -1,5 +1,5 @@
 var mqtt = require("mqtt");
-var client = mqtt.connect('ws://mqtt-carepol.herokuapp.com:80');
+var client = mqtt.connect('wss://mqtt-carepol.herokuapp.com:443');
 
 client.on('connect', () => {
     setInterval(() => {
@@ -9,6 +9,5 @@ client.on('connect', () => {
 })
 
 client.on('error', (err) => {
-    console.log(err);
-    
+    console.log(err);  
 })
