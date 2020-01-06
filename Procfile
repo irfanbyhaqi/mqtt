@@ -1,1 +1,1 @@
-web: node server.js
+foreman run npm start
