@@ -43,7 +43,7 @@ httpServer.on('clientDisconnected', function(client) {
 /**
 * End of Mosca Server Settings
 */
-app.listen(4000, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Magic happens on port`);
 });
 
