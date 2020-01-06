@@ -1,5 +1,5 @@
 var mqtt = require("mqtt");
-var client = mqtt.connect('mqtt://172.10.10.26');
+var client = mqtt.connect('ws://mqtt-carepol.herokuapp.com:');
 
 client.on('connect', () => {
     client.subscribe('myTopic')
