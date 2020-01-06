@@ -10,14 +10,14 @@ const app = express();
 * Mosca Server Settings below
 */
 var mosca = require('mosca');
-var http = require('http');
-var httpServer = http.createServer(app);
+//var http = require('http');
+//var httpServer = http.createServer(app);
 
 var setting = {
     port:process.env.PORT_2 || 1883
 }
 
-httpServer= new mosca.Server(setting)
+var httpServer= new mosca.Server(setting)
 
 httpServer.on('ready', function() {
     console.log('Mosca is running');
@@ -43,8 +43,8 @@ httpServer.on('clientDisconnected', function(client) {
 /**
 * End of Mosca Server Settings
 */
-app.listen(process.env.PORT, () => {
-    console.log(`Magic happens on port`);
-});
+// app.listen(process.env.PORT, () => {
+//     console.log(`Magic happens on port`);
+// });
 
-module.exports = app;
+//module.exports = app;
