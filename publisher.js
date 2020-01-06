@@ -1,5 +1,5 @@
 var mqtt = require("mqtt");
-var client = mqtt.connect('mqtt://mqtt-carepol.herokuapp.com:80');
+var client = mqtt.connect('mqtt://mqtt-sse.herokuapp.com:1883');
 
 client.on('connect', () => {
     setInterval(() => {
