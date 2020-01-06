@@ -14,7 +14,7 @@ var http = require('http');
 var httpServer = http.createServer(app);
 
 var setting = {
-    port:1883
+    port:process.env.PORT_2
 }
 
 httpServer= new mosca.Server(setting)
