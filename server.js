@@ -31,9 +31,11 @@ httpServer.on('published', function(packet, client) {
 httpServer.on('subscribed', function(topic, client) {
     console.log('subscribed : ', topic);
 });
+
 httpServer.on('unsubscribed', function(topic, client) {
     console.log('unsubscribed : ', topic);
 });
+
 httpServer.on('clientDisconnecting', function(client) {
     console.log('clientDisconnecting : ', client.id);
 });
